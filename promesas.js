@@ -55,9 +55,14 @@ let getEmpleado = (id) => {
 
 getEmpleado(4).then(empleado => {
 
+    /* encadenar promesas */
+    //al encadenar las promesas (una promesa dentro de otro usando return) con ésto puedo hacer varios then en cadena.
+
     console.log("ID: " + empleado.id);
     console.log("Nuestro usuario: " + empleado.nombre);
 
 }, (err) => {
     console.log(err);
-});
+}).catch(err => {
+    console.log(err);
+})
